@@ -11,6 +11,10 @@ def main():
     # 60 FPS calling the tick() passing 1/60th seconds
     pygame.time.Clock()
     dt = 0
+    # Creating Groups
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+    Player.containers = (updatable, drawable)
     # Player
     player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
     # Game Loop
@@ -20,9 +24,11 @@ def main():
             if event.type == pygame.QUIT:
                 return
         # Update rotation
-        player.update(dt)
+        updatable.update(dt)
         screen.fill("black") # fill screen with black
-        player.draw(screen) # draw player in white 
+        # player.draw(screen) # draw player in white
+        for obj in drawable:
+            obj.draw(screen) 
         pygame.display.flip() # Refresh the screen
 
         dt = pygame.time.Clock().tick(60) / 1000  # Delta time
