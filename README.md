@@ -18,6 +18,7 @@ Because this project is part of the [Boot.dev](https://boot.dev) Backend develop
 We are going to be using pygame and a virtual environment to develop our game.
 ### Pygame
 Pygame is a module for developing games using Python. It provides simple functions and methods for us to easily draw images within a GUI window and handle user input.
+[Pygame documentation](https://www.pygame.org/docs/ref/pygame.html)
 ### Virtual Environment
 Virtual environments are Python's way to keep dependencies (e.g. the pygame module) separate from other projects on our machine. For example, we need pygame version 2 for this project, but another project on your computer might require version 1.
 
@@ -43,3 +44,8 @@ Run the program with uv:
 ```bash
 uv run main.py
 ```
+## Game Loop
+Video games are generally built using a game loop. The simplest game loop has 3 steps:
+- Check for player inputs
+- Update the game world
+- Draw the game to the screen
