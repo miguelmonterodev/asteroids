@@ -19,7 +19,8 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-        
+        # Update rotation
+        player.update(dt)
         screen.fill("black") # fill screen with black
         player.draw(screen) # draw player in white 
         pygame.display.flip() # Refresh the screen
