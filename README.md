@@ -56,3 +56,17 @@ import pygame
 
 pygame.init()  # Initialize all imported pygame modules
 ```
+### Get a new GUI window
+```python
+# pygame.display.set_mode()
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+# game loop
+while True:
+        # Check if the user has closed the window and exit the game loop 
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
+        
+        screen.fill("black")
+        pygame.display.flip() # Refresh the screen
+```
