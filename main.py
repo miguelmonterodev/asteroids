@@ -1,5 +1,6 @@
 import pygame
 from constants import *
+from player import Player
 
 def main():
     pygame.init()
@@ -10,6 +11,8 @@ def main():
     # 60 FPS calling the tick() passing 1/60th seconds
     pygame.time.Clock()
     dt = 0
+    # Player
+    player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
     # Game Loop
     while True:
         # Check if the user has closed the window and exit the game loop 
@@ -17,7 +20,8 @@ def main():
             if event.type == pygame.QUIT:
                 return
         
-        screen.fill("black")
+        screen.fill("black") # fill screen with black
+        player.draw(screen) # draw player in white 
         pygame.display.flip() # Refresh the screen
 
         dt = pygame.time.Clock().tick(60) / 1000  # Delta time
