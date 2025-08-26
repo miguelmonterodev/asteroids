@@ -14,4 +14,28 @@ Because of learning goals such as:
 - Have fun building a program
 Because this project is part of the [Boot.dev](https://boot.dev) Backend development course.
 
+## Installation
+We are going to be using pygame and a virtual environment to develop our game.
+### Pygame
+Pygame is a module for developing games using Python. It provides simple functions and methods for us to easily draw images within a GUI window and handle user input.
+### Virtual Environment
+Virtual environments are Python's way to keep dependencies (e.g. the pygame module) separate from other projects on our machine. For example, we need pygame version 2 for this project, but another project on your computer might require version 1.
+
+As a best practice, each Python project on your machine should have its own virtual environment to keep them isolated from each other.
+
+Create a new uv project:
+```bash
+uv init your-project-name
+cd your-project-name
+```
+Create a virtual environment and activate:
+```bash
+uv venv
+source .venv/bin/activate
+```
+Add the pygame library and make sure pygame is installed:
+```bash
+uv add pygame==2.6.1
+uv run -m pygame  # exit code of 1, but the output will show that pygame is installed.
+```
 
