@@ -38,4 +38,8 @@ Add the pygame library and make sure pygame is installed:
 uv add pygame==2.6.1
 uv run -m pygame  # exit code of 1, but the output will show that pygame is installed.
 ```
-
+## Running the program
+Run the program with uv:
+```bash
+uv run main.py
+```
