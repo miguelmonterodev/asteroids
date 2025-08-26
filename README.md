@@ -49,3 +49,10 @@ Video games are generally built using a game loop. The simplest game loop has 3 
 - Check for player inputs
 - Update the game world
 - Draw the game to the screen
+
+### Initialize Pygame
+```python
+import pygame
+
+pygame.init()  # Initialize all imported pygame modules
+```
