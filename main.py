@@ -37,11 +37,17 @@ def main():
                 return
         # Update rotation
         updatable.update(dt)
-        # Check Collisions
+        # Check Collisions player-asteroid
         for obj in asteroid:
             if obj.check_collision(player):
                 print("Game over!")
                 sys.exit(1)
+        # Check Collisions bullet-asteroid and Destroy using .kill() method
+        for shot in shots:
+            for obj in asteroid:
+                if obj.check_collision(shot):
+                    obj.kill()
+                    shot.kill()
         # fill screen with black
         screen.fill("black") 
         # player.draw(screen) # draw player in white
