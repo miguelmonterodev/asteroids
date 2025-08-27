@@ -3,6 +3,7 @@ from constants import *
 from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
+import sys
 
 def main():
     pygame.init()
@@ -33,7 +34,13 @@ def main():
                 return
         # Update rotation
         updatable.update(dt)
-        screen.fill("black") # fill screen with black
+        # Check Collisions
+        for obj in asteroid:
+            if obj.check_collision(player):
+                print("Game over!")
+                sys.exit(1)
+        # fill screen with black
+        screen.fill("black") 
         # player.draw(screen) # draw player in white
         for obj in drawable:
             obj.draw(screen) 
