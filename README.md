@@ -70,3 +70,17 @@ while True:
         screen.fill("black")
         pygame.display.flip() # Refresh the screen
 ```
+## Moving around
+We want the spaceship to be able to move; but what does that mean specifically? Let's break it down:
+- If we press the move-left key, the ship should rotate to the left.
+- If we press the move-right key, the ship should rotate to the right.
+- If we press the move-forward key, the ship should move forward.
+- If we press the move-backward key, the ship should move backward.
+```python
+PLAYER_TURN_SPEED = 300
+```
+## Bullets
+- Are small circles
+- Move at a constant speed in a straight line
+- Split up asteroids when they collide with them
+- Are spawned by player input (spacebar) and move in the direction the player is facing
