@@ -84,3 +84,11 @@ PLAYER_TURN_SPEED = 300
 - Move at a constant speed in a straight line
 - Split up asteroids when they collide with them
 - Are spawned by player input (spacebar) and move in the direction the player is facing
+
+## Asteroid's Destruction
+Okay so bullets are flying, but they don't do anything. Let's kill some asteroids!
+There are three types of asteroids:
+- Large
+- Medium
+- Small
+When a large asteroid is destroyed, it should split into two medium asteroids. When a medium asteroid is destroyed, it should split into two small asteroids. When a small asteroid is destroyed, it should disappear.
